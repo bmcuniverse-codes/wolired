@@ -1,0 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
+import { ShieldCheck } from 'lucide-react';
+import { useAuth } from '../context/AuthContext';
+export default function Navbar(){ const {user,logout}=useAuth(); const nav=useNavigate(); return <nav className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur"><div className="mx-auto flex max-w-7xl items-center justify-between p-4"><Link to="/" className="flex items-center gap-2 font-black"><ShieldCheck className="text-cyan-400"/> ExamGuard AI</Link><div className="flex items-center gap-3 text-sm">{user?<><Link to={user.role==='admin'?'/admin':'/student'}>Dashboard</Link><button onClick={()=>{logout();nav('/login')}} className="btn py-2">Logout</button></>:<><Link to="/login">Login</Link><Link to="/register" className="btn py-2">Register</Link></>}</div></div></nav> }

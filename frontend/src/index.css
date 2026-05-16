@@ -4,3 +4,59 @@ body { @apply bg-slate-950 text-slate-100; }
 .btn { @apply rounded-xl bg-cyan-400 px-5 py-3 font-bold text-slate-950 hover:bg-cyan-300 transition disabled:opacity-50; }
 .card { @apply rounded-3xl border border-white/10 bg-white/10 p-5 shadow-2xl backdrop-blur; }
 .badge { @apply rounded-full px-3 py-1 text-xs font-bold; }
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+video,
+canvas,
+table {
+  max-width: 100%;
+}
+
+.card {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  main {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  h1 {
+    font-size: 1.55rem !important;
+    line-height: 2rem !important;
+  }
+
+  h2 {
+    font-size: 1.25rem !important;
+  }
+
+  .card {
+    padding: 1rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  input,
+  select,
+  textarea {
+    width: 100%;
+    font-size: 16px !important;
+  }
+}

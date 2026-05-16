@@ -238,8 +238,8 @@ export default function ExamRoom() {
   }
 
   return (
-    <main className="mx-auto grid max-w-7xl gap-6 p-4 sm:p-6 lg:grid-cols-[1fr_380px]">
-      <section className="card">
+    <main className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 overflow-hidden p-3 sm:gap-6 sm:p-6 lg:grid-cols-[minmax(0,1fr)_380px]">
+      <section className="card min-w-0">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>
             <h1 className="text-2xl font-black">{exam.title}</h1>
@@ -293,7 +293,7 @@ export default function ExamRoom() {
         </button>
       </section>
 
-      <aside className="space-y-5">
+      <aside className="min-w-0 space-y-4 lg:space-y-5">
         <div className="card">
           <h2 className="mb-3 font-bold">Live AI Monitor</h2>
 
